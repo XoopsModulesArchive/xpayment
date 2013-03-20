@@ -1,0 +1,41 @@
+========================================
+ 2012/03/27 07:43:00 Version 1.45 STABLE
+========================================
+ - Changed class/gateways/paypal/paypal.php Form given name and id (Wishcraft)
+ - Changed class/gateways/twocheckout/twocheckout.php Form given name and id (Wishcraft)
+ - Changed class/gateways/ccbill/ccbill.php Form given name and id (Wishcraft)
+ - Changed class/gateways/zombaio/zombaio.php Form given name and id (Wishcraft)
+ - Changed sql/mysql.sql topayment time field added to invoice table (Wishcraft)
+ - Changed include/update.sql topayment time field added to invoice table (Wishcraft) 
+ - Changed class/invoice.php topayment time field added to invoice object (Wishcraft)
+ - Changed index.php topayment time field added to invoice object (Wishcraft)
+ - Changed cancel.php changed to php 5.x (Wishcraft)
+ - Changed return.php changed to php 5.x (Wishcraft)
+ - Changed ipn.php changed to php 5.x (Wishcraft)
+ 
+========================================
+ 2011/11/08 04:59:00 Version 1.39 STABLE
+========================================
+ - Changed $pathImageAdmin renamed to $GLOBALS['xtransamImageAdmin']  (Wishcraft)
+ - Changed $pathImageIcon renamed to $GLOBALS['xtransamImageIcon']  (Wishcraft)
+ - Changed $GLOBALS['xoopsModule'] in module renamed to $GLOBALS['xpaymentModule'] (Wishcraft)
+ - Changed $GLOBALS['xoopsModuleConfig'] in module renamed to $GLOBALS['xpaymentModuleConfig'] (Wishcraft)
+ 
+========================================
+ 2011/11/05 01:01:01 Version 1.38 STABLE
+========================================
+ - Added 32x32 System Icons Added to the Frameworks Module Class (wishcraft)
+ - Added 16x16 System Icons Added to the Frameworks Module Class (wishcraft)
+ - Added More informative InfoBox on Dashboard index.php (wishcraft)
+ - Added GUI Admin for Xoops 2.5.x  (wishcraft)
+ - Added language/english/help folder  (wishcraft)
+ - Added language/english/help/help.html folder  (wishcraft)
+ - Added admin/index.php send reminder notice to invoicee about invoice button in admin  (wishcraft)
+ - Added admin/index.php link to user HTML and PDF Invoice in admin  (wishcraft)
+ - Added language/english/mail_templates/xpayment_invoice_reminder.tpl email template for reminder  (wishcraft)
+ - Changed admin/menu.php include dashboard and about options  (wishcraft)
+ - Changed language/english/modinfo.php include dashboard and about constants  (wishcraft)
+ - Changed language/english/admin.php include dashboard and about constants  (wishcraft)
+ - Changed admin/index.php to include dashboard and about routines  (wishcraft)
+ - Changed class/invoice.php to include dashboard routines in handler  (wishcraft)
+ - Changed admin/index.php export function for invoice header with filters  (wishcraft)

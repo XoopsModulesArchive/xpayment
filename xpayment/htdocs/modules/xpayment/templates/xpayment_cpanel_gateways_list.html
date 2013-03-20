@@ -1,0 +1,54 @@
+<h1><{$smarty.const._XPY_AM_INSTALLEDGATEWAYS_H1}></h1>
+<p><{$smarty.const._XPY_AM_INSTALLEDGATEWAYS_P}></p>
+<p style="height:55px;clear:both;">
+	<div style="float:right; position:relative; top:-35px;"><{$pagenav}></div>
+</p>
+<form action="<{$php_self}>" method="post">
+<table>
+	<tr class="head">
+		<th><{$name_th}></th>
+		<th><{$description_th}></th>
+		<th><{$author_th}></th>
+		<th><{$testmode_th}></th>
+		<th><{$smarty.const._XPY_AM_ACTIONS_TH}></th>
+	</tr>
+	<{foreach item=gateway from=$gateways}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$gateway.name}></td>
+		<td><{$gateway.description}></td>
+		<td><{$gateway.author}></td>
+		<td align='center'><input type="checkbox" name='testmode[<{$gateway.gid}>]' value="1" <{if $gateway.testmode == -1}>disabled="disabled" <{/if}><{if $gateway.testmode == 1}>checked="checked"<{/if}>/></td>
+		<td align='center'><a href="<{$php_self}>?op=gateways&fct=options&gid=<{$gateway.gid}>"><{$smarty.const._XPY_AM_EDITOPTIONS}></a>&nbsp;|&nbsp;<a href="<{$php_self}>?op=gateways&fct=update&class=<{$gateway.class}>"><{$smarty.const._XPY_AM_UPDATEGATEWAY}></a></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="5"><input type="submit" name="submit" value="<{$smarty.const._SUBMIT}>"/></td>
+	</tr>
+</table>
+<input type="hidden" name="op" value="gateways"/>
+<input type="hidden" name="fct" value="settestmode"/>
+</form>
+<{if $uninstalled}>
+<br/>
+<h1><{$smarty.const._XPY_AM_UNINSTALLEDGATEWAYS_H1}></h1>
+<p><{$smarty.const._XPY_AM_UNINSTALLEDGATEWAYS_P}></p>
+<table>
+	<tr class="head">
+		<th><{$smarty.const._XPY_AM_TH_NAME}></th>
+		<th><{$smarty.const._XPY_AM_TH_DESCRIPTION}></th>
+		<th><{$smarty.const._XPY_AM_TH_AUTHOR}></th>
+		<th><{$smarty.const._XPY_AM_ACTIONS_TH}></th>
+	</tr>
+	<{foreach item=gateway from=$uninstalled}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$gateway.name}></td>
+		<td><{$gateway.description}></td>
+		<td><{$gateway.author}></td>
+		<td align='center'><a href="<{$php_self}>?op=gateways&fct=install&class=<{$gateway.class}>"><{$smarty.const._XPY_AM_INSTALLGATEWAY}></a></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="4">&nbsp;</td>
+	</tr>
+</table>
+<{/if}>

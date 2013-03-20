@@ -1,0 +1,76 @@
+<h1><{$smarty.const._XPY_AM_INVOICELIST_H1}></h1>
+<p><{$smarty.const._XPY_AM_INVOICELIST_P}></p>
+<div style="float:left; clear:both;"><a href="<{$php_self}>?op=invoices&fct=export&filter=<{$filter}>&order=<{$order}>&sort=<{$sort}>"><{$smarty.const._XPY_AM_EXPORT_INVOICELIST_A}></a></div>
+<p style="height:55px;clear:both;">
+	<div style="float:right; position:relative; top:-35px;"><{$pagenav}></div>
+</p>
+<table>
+	<tr class="head">
+		<th><{$mode_th}></th>
+		<th><{$remittion_th}></th>
+		<th><{$created_th}></th>
+		<th><{$invoicenumber_th}></th>
+		<th><{$drawfor_th}></th>
+		<th><{$drawto_th}></th>
+		<th><{$drawto_email_th}></th>
+		<th><{$tax_th}></th>
+		<th><{$shipping_th}></th>
+		<th><{$handling_th}></th>
+		<th><{$amount_th}></th>
+		<th><{$grand_th}></th>
+		<th><{$rate_th}></th>
+		<th><{$interest_th}></th>		
+		<th><{$discount_th}></th>
+		<th><{$discount_amount_th}></th>
+		<th><{$items_th}></th>
+		<th><{$transactionid_th}></th>
+		<th><{$smarty.const._XPY_AM_ACTIONS_TH}></th>
+	</tr>
+	<tr class="head">
+		<th><{$filter_mode_th}></th>
+		<th><{$filter_remittion_th}></th>
+		<th>&nbsp;</th>
+		<th><{$filter_invoicenumber_th}></th>
+		<th><{$filter_drawfor_th}></th>
+		<th><{$filter_drawto_th}></th>
+		<th><{$filter_drawto_email_th}></th>
+		<th><{$filter_tax_th}></th>
+		<th><{$filter_shipping_th}></th>
+		<th><{$filter_handling_th}></th>
+		<th><{$filter_amount_th}></th>
+		<th><{$filter_grand_th}></th>
+		<th><{$filter_rate_th}></th>
+		<th><{$filter_interest_th}></th>
+		<th><{$filter_discount_th}></th>
+		<th><{$filter_discount_amount_th}></th>
+		<th><{$filter_items_th}></th>
+		<th><{$filter_transactionid_th}></th>
+		<th>&nbsp;</th>
+	</tr>
+	<{foreach item=invoice from=$invoices}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$invoice.mode}></td>
+		<td align='center'><{$invoice.remittion}></td>
+		<td align='center'><{$invoice.created_datetime}></td>
+		<td align='center'><{$invoice.invoicenumber}></td>
+		<td><{$invoice.drawfor}></td>
+		<td><{$invoice.drawto}></td>
+		<td><a href="mailto:<{$invoice.drawto_email}>"><{$invoice.drawto_email}></a></td>
+		<td align='right'><{$invoice.tax}> <{$invoice.currency}></td>
+		<td align='right'><{$invoice.shipping}> <{$invoice.currency}></td>
+		<td align='right'><{$invoice.handling}> <{$invoice.currency}></td>
+		<td align='right'><{$invoice.amount}> <{$invoice.currency}></td>
+		<td align='right'><strong><{$invoice.grand}> <{$invoice.currency}></strong></td>
+		<td align='center'><{$invoice.rate}>%</td>
+		<td align='center'><{$invoice.interest}> <{$invoice.currency}></td>
+		<td align='center'><{$invoice.discount}>%</td>
+		<td align='center'><{$invoice.discount_amount}> <{$invoice.currency}></td>
+		<td align='center'><{$invoice.items}></td>
+		<td align='center'><{$invoice.transactionid}></td>
+		<td align='center'><a href="<{$invoice.url}>"><{$smarty.const._XPY_AM_USER_INVOICE}></a>&nbsp;|&nbsp;<a href="<{$invoice.pdfurl}>"><{$smarty.const._XPY_AM_USER_PDF}></a>&nbsp;|&nbsp;<{if $invoice.mode == 'UNPAID'}><a href="<{$php_self}>?op=invoices&fct=resendnotice&iid=<{$invoice.iid}>"><{$smarty.const._XPY_AM_RESEND_NOTICE}></a>&nbsp;|&nbsp;<a href="<{$php_self}>?op=invoices&fct=cancel&iid=<{$invoice.iid}>"><{$smarty.const._XPY_AM_CANCEL}></a>&nbsp;|&nbsp;<{/if}><a href="<{$php_self}>?op=invoices&fct=view&iid=<{$invoice.iid}>"><{$smarty.const._XPY_AM_VIEW}></a>&nbsp;|&nbsp;<a href="<{$php_self}>?op=transactions&fct=list&iid=<{$invoice.iid}>"><{$smarty.const._XPY_AM_TRANSACTIONS}></a></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="17">&nbsp;</td>
+	</tr>
+</table>

@@ -1,0 +1,26 @@
+<h1><{$smarty.const._XPY_AM_TAX_H1}></h1>
+<p><{$smarty.const._XPY_AM_TAX_P}></p>
+<p style="height:55px;clear:both;">
+	<div style="float:right; position:relative; top:-35px;"><{$pagenav}></div>
+</p>
+<form method="post" action='<{$php_self}>'>
+<table>
+	<tr class="head">
+		<th><{$country_th}></th>
+		<th><{$code_th}></th>
+		<th><{$rate_th}></th>
+	</tr>
+	<{foreach item=rate from=$rates}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$rate.form.id}><{$rate.form.country}></td>
+		<td align='right'><{$rate.form.code}></td>
+		<td align='right'><{$rate.form.rate}></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="3"><input type='submit' value="<{$smarty.const._SUBMIT}>" name="submit"/></td>
+	</tr>
+</table>
+<input type='hidden' value="tax" name="op"/>
+<input type='hidden' value="save" name="fct"/>
+</form>

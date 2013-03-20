@@ -1,0 +1,29 @@
+<h1><{$smarty.const._XPY_AM_GROUPS_H1}></h1>
+<p><{$smarty.const._XPY_AM_GROUPS_P}></p>
+<p><{$selectform}></p>
+<div style="float:right;"><{$pagenav}></div>
+<table>
+	<tr class="head">
+		<th><{$plugin_th}></th>
+		<th><{$uid_th}></th>
+		<th><{$limit_th}></th>
+		<th><{$minimum_th}></th>
+		<th><{$maximum_th}></th>
+		<th><{$smarty.const._XPY_AM_ACTIONS_TH}></th>
+	</tr>
+	<{foreach item=group from=$groups}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$group.plugin}></td>
+		<td align='center'><{if $group.user.name}><{$group.user.name}><{else}><{$group.user.uname}><{/if}></td>
+		<td align='center'><{if $group.limit}><{$smarty.const._YES}><{else}><{$smarty.const._NO}><{/if}></td>
+		<td align='center'><{$group.minimum}></td>
+		<td align='center'><{$group.maximum}></td>
+		<td align='center'><a href="<{$php_self}>?op=groups&fct=edit&rid=<{$group.rid}>"><{$smarty.const._XPY_AM_EDITGROUP}></a>&nbsp;|&nbsp;<a href="<{$php_self}>?op=groups&fct=delete&rid=<{$group.rid}>"><{$smarty.const._DELETE}></a></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="6">&nbsp;</td>
+	</tr>
+</table>
+<div style="float:left;"><{$pagenav}></div>
+<p align="center"><{$form}></p>
