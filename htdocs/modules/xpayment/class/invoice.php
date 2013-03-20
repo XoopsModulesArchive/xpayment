@@ -172,7 +172,7 @@ class XpaymentInvoice extends XoopsObject
 	function toArray() {
 		$ret = array();
 		foreach(parent::toArray() as $field => $value) {
-			if ($this->var[$field]['type']==XOBJ_DTYPE_DECIMAL) {
+			if ($this->vars[$field]['data_type']==XOBJ_DTYPE_DECIMAL) {
 				if ($field=='weight')
 					$ret[$field] = number_format($value, 4);
 				else 
@@ -493,6 +493,8 @@ class XpaymentInvoiceHandler extends XoopsPersistableObjectHandler
 		$config_handler =& xoops_gethandler('config');
 		$xpMod = $module_handler->getByDirname('xpayment');
 		$xoConfig = $config_handler->getConfigList($xpMod->getVar('mid'));
+        $run_plugin='';
+        $run_plugin_remittence='';
 		
 		if ($obj->isNew()) {
 			$obj->setVar('created', time());

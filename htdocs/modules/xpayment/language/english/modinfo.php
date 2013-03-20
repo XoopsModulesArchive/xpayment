@@ -191,4 +191,5 @@
 	define('_XPY_MI_INTEREST_RATE_DESC', 'This is the default interest rate charged per annum!');
 	define('_XPY_MI_MANUALCODE', 'Prefix for manual payment reference!');
 	define('_XPY_MI_MANUALCODE_DESC', 'This is the prefix for manual payment reference which is the invoice number and this prefix.');
-?>
+
+define('_XPY_ADMENU0', 'Home');
