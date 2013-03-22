@@ -21,21 +21,21 @@
  * @translation     Richardo Costa <lusopoemas@gmail.com>
  * @translation     Kris_fr <kris@frxoops.org>
  */
-	define('_XPY_GI_2CO_NAME', '2Checkout Gateway');
-	define('_XPY_GI_2CO_DESC', 'This gateway for 2checkout.com allows for invoices for payment.');
-	define('_XPY_GI_2CO_AUTHOR', 'Simon Roberts (simon@chronolabs.coop)');
-	define('_XPY_GI_2CO_NAME_VENDORID', '2CO Vendor ID');
-	define('_XPY_GI_2CO_NAME_SECRETWORD', '2CO Secret Word');
-	define('_XPY_GI_2CO_NAME_URL', '2CO Form URL');
-	define('_XPY_GI_2CO_NAME_PAYWITH', 'Payment Button Caption');
-	define('_XPY_GI_2CO_NAME_FEE', '2Checkout Fee Percentage (%)');
-	define('_XPY_GI_2CO_NAME_DEPOSIT', '2Checkout Security Deposit Percentile (%)');	
-	define('_XPY_GI_2CO_VALUE_VENDORID', '');
-	define('_XPY_GI_2CO_VALUE_SECRETWORD', '');
-	define('_XPY_GI_2CO_VALUE_URL', 'https://www.2checkout.com/checkout/purchase');
-	define('_XPY_GI_2CO_VALUE_PAYWITH', 'Pay with 2cO');
-	define('_XPY_GI_2CO_NAME_IDTYPE', 'ID Type (Depreciated)');
-	define('_XPY_GI_2CO_VALUE_IDTYPE', '1');
-	define('_XPY_GI_2CO_VALUE_FEE', '14.5');
-	define('_XPY_GI_2CO_VALUE_DEPOSIT', '5');	
+	define("_XPY_GI_2CO_NAME","2Checkout Gateway");
+	define("_XPY_GI_2CO_DESC","This gateway for 2checkout.com allows for invoices for payment.");
+	define("_XPY_GI_2CO_AUTHOR","Simon Roberts (simon@chronolabs.coop)");
+	define("_XPY_GI_2CO_NAME_VENDORID","2CO Vendor ID");
+	define("_XPY_GI_2CO_NAME_SECRETWORD","2CO Secret Word");
+	define("_XPY_GI_2CO_NAME_URL","2CO Form URL");
+	define("_XPY_GI_2CO_NAME_PAYWITH","Payment Button Caption");
+	define("_XPY_GI_2CO_NAME_FEE","2Checkout Fee Percentage (%)");
+	define("_XPY_GI_2CO_NAME_DEPOSIT","2Checkout Security Deposit Percentile (%)");	
+	define("_XPY_GI_2CO_VALUE_VENDORID","");
+	define("_XPY_GI_2CO_VALUE_SECRETWORD","");
+	define("_XPY_GI_2CO_VALUE_URL","https://www.2checkout.com/checkout/purchase");
+	define("_XPY_GI_2CO_VALUE_PAYWITH","Pay with 2cO");
+	define("_XPY_GI_2CO_NAME_IDTYPE","ID Type (Depreciated)");
+	define("_XPY_GI_2CO_VALUE_IDTYPE","1");
+	define("_XPY_GI_2CO_VALUE_FEE","14.5");
+	define("_XPY_GI_2CO_VALUE_DEPOSIT","5");	
 ?>
