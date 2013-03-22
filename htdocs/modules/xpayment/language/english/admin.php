@@ -27,7 +27,7 @@
 	define('_XPY_MSG_GATEWAY_UPDATED', 'Gateway Updated Successfully!');
 	define('_XPY_MSG_OPTIONS_SAVED', 'Gateway Options Saved Successfully!');
 	define('_XPY_MSG_TESTMODES_SAVED', 'Gateway Testmode Saved Successfully!');
-	define('_XPY_MSG_INVOICE_PAID', 'Invoice Paided Successfully!');
+	define('_XPY_MSG_INVOICE_PAID', 'Invoice Paid Successfully!');
 	define('_XPY_MSG_INVOICE_CANCELED', 'Invoice Canceled Successfully!');
 	define('_XPY_MSG_CONFIRM_CANCEL', 'Are you sure you wish to cancel this invoice?');	
 	define('_XPY_MSG_RULE_SAVED', 'Group Rule Saved!');

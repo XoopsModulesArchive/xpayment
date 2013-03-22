@@ -22,6 +22,7 @@
  * @translation     Kris_fr <kris@frxoops.org>
  */
 	include('header.php');
+    $invoice='';
 	
 	if (isset($_POST)&&!empty($_POST)) {
 		
@@ -227,7 +228,7 @@
 		} elseif (isset($_GET['invoicenum'])&&$GLOBALS['xoopsModuleConfig']['id_protect']==false) {
 			$invoice =& $invoice_handler->getInvoiceNumber($_GET['invoicenum']);
 		} else {
-			$key = $_GET['iid'];
+			$key = isset($_GET['iid']) ? $_GET['iid'] : '';
 			$criteria = new Criteria('offline', time(), '>=');
 			$criteria->setSort('iid');
 			$criteria->setOrder('DESC');

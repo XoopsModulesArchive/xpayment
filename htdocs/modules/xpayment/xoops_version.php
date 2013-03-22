@@ -106,7 +106,7 @@ $modversion['tables'][7] = 'xpayment_discounts';
 
 // Admin
 $modversion['hasAdmin'] = 1;
-$modversion['adminindex'] = "admin/index.php";
+$modversion['adminindex'] = "admin/main.php";
 $modversion['adminmenu'] = "admin/menu.php";
 
 // Install Script

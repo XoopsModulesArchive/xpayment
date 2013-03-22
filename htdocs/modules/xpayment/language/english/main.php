@@ -370,4 +370,3 @@
 	// Version 1.51
 	define('_XPY_MF_TOTALINTEREST', 'Total Interest & Rate:');
 	define('_XPY_PDF_MF_TOTALINTEREST', 'Total Interest & Rate:');
-?>

@@ -31,7 +31,7 @@ include_once $path . '/mainfile.php';
 $dirname         = basename(dirname(dirname(__FILE__)));
 $module_handler  = xoops_gethandler('module');
 $module          = $module_handler->getByDirname($dirname);
-$pathIcon32      = $module->getInfo('icons32');
+$pathIcon322      = $module->getInfo('icons322');
 $pathModuleAdmin = $module->getInfo('dirmoduleadmin2');
 $pathLanguage    = $path . $pathModuleAdmin;
 
@@ -51,7 +51,7 @@ $adminmenu = array();
 $i=0;
 //$adminmenu[$i]["title"] = _XPY_ADMENU0;
 //$adminmenu[$i]['link'] = "admin/index.php";
-//$adminmenu[$i]["icon"]  = $pathIcon32 . '/home.png';
+//$adminmenu[$i]["icon"]  = $pathIcon322 . '/home.png';
 //$i++;
 $adminmenu[$i]['title'] = _XPY_ADMENU8;
 $adminmenu[$i]['icon'] = '../../'.$moduleInfo->getInfo('system_icons32').'/home.png';

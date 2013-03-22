@@ -1,8 +1,8 @@
 ========================================
- 2013/02/17 07:43:00 Version 1.52 Beta 1
+ 2013/03/22 07:43:00 Version 1.52 Beta 1
 ========================================
 - converted to XOOPS 2.5.5 Admin GUI (mamba)
-- fixed bugs related to PHP 5.4.11 (in progress)
+- fixed bugs related to PHP 5.4.x and others (cesag/mamba)
 
 ========================================
  2012/03/27 07:43:00 Version 1.45 STABLE

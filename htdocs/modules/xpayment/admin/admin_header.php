@@ -35,8 +35,8 @@ xoops_loadLanguage('admin', $thisModuleDir);
 xoops_loadLanguage('modinfo', $thisModuleDir);
 xoops_loadLanguage('main', $thisModuleDir);
 
-$pathIcon16 = '../'.$xoopsModule->getInfo('icons16');
-$pathIcon32 = '../'.$xoopsModule->getInfo('icons32');
+$pathIcon162 = '../'.$xoopsModule->getInfo('icons162');
+$pathIcon322 = '../'.$xoopsModule->getInfo('icons322');
 $pathModuleAdmin = $xoopsModule->getInfo('dirmoduleadmin2');
 
 include_once $GLOBALS['xoops']->path($pathModuleAdmin.'/moduleadmin.php');
