@@ -169,7 +169,7 @@
 	define("_XPY_ADMENU9","About");
 	//  Version 1.45
 	define("_XPY_MI_SECS_TOPAYMENT","Number of Seconds to Cut to Payment when specified.");
-	define("_XPY_MI_SECS_TOPAYMENT_DESC","When $_POST[\'topayment\'] = true is set, cut to screen within this amount of time.");
+	define("_XPY_MI_SECS_TOPAYMENT_DESC","When \$_POST['topayment'] = true is set, cut to screen within this amount of time.");
 	// Version 1.51
 	define("_XPY_MI_ANNUM","Invoice Interest Annum");
 	define("_XPY_MI_ANNUM_DESC","This is the period of time to wait on before charging interest on an unpaid invoice!");
