@@ -29,24 +29,31 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 $modversion['dirname'] 		= basename(dirname(__FILE__));
 $modversion['name'] 		= ucfirst(basename(dirname(__FILE__)));
-$modversion['version']     	= "1.51";
+$modversion['version']     	= "1.52";
 $modversion['releasedate'] 	= "2012-08-21";
 
 $modversion['description'] 	= _MI_XPY_DESC;
 $modversion['credits']     	= _MI_XPY_CREDITS;
 $modversion['author']      	= "Wishcraft, Aph3x, Mariane";
-$modversion['help']        	= "";
-$modversion['license']     	= "GPL 2.0";
-$modversion['official']    	= 1;
+$modversion['help']        = 'page=help';
+$modversion['license']     = 'GNU GPL 2.0 or later';
+$modversion['license_url'] = "www.gnu.org/licenses/gpl-2.0.html";
+$modversion['official']    	= 0;
 $modversion['image']       	= "images/xpayment_slogo.png";
 $modversion['website']      = "www.chronolabs.com.au";
 
 $modversion['system_dirmoduleadmin'] = 'Frameworks/moduleclasses';
 $modversion['system_icons16'] = 'Frameworks/moduleclasses/icons/16';
 $modversion['system_icons32'] = 'Frameworks/moduleclasses/icons/32';
+
+$modversion['dirmoduleadmin2'] = '/Frameworks/moduleclasses/moduleadmin';
+$modversion['icons162']        = '../../Frameworks/moduleclasses/icons/16';
+$modversion['icons322']        = '../../Frameworks/moduleclasses/icons/32';
+
 $modversion['dirmoduleadmin'] = 'modules/xpayment';
 $modversion['icons16'] = 'modules/xpayment/images/icons/16';
 $modversion['icons32'] = 'modules/xpayment/images/icons/32';
+
 
 $modversion['release_info'] = "Stable 2012/08/21";
 $modversion['release_file'] = XOOPS_URL."/modules/xpayment/docs/changelog.txt";
@@ -67,12 +74,26 @@ $modversion['maillist_announcements'] = "";
 $modversion['maillist_bugs'] = "";
 $modversion['maillist_features'] = "";
 
+//about
+$modversion['release_date']        = '2013/04/28';
+$modversion["module_website_url"]  = "www.xoops.org";
+$modversion["module_website_name"] = "XOOPS";
+$modversion["module_status"]       = "Final";
+$modversion['min_php']             = '5.2';
+$modversion['min_xoops']           = "2.5.6";
+$modversion['min_admin']           = '1.1';
+$modversion['min_db']              = array(
+    'mysql'  => '5.0.7',
+    'mysqli' => '5.0.7'
+);
+
 
 // Mysql file
 $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
 
 // Main
 $modversion['hasMain'] = 1;
+$modversion['system_menu'] = 1;
 
 $modversion['tables'][0] = 'xpayment_invoice_items';
 $modversion['tables'][1] = 'xpayment_invoice';
@@ -85,7 +106,7 @@ $modversion['tables'][7] = 'xpayment_discounts';
 
 // Admin
 $modversion['hasAdmin'] = 1;
-$modversion['adminindex'] = "admin/index.php";
+$modversion['adminindex'] = "admin/main.php";
 $modversion['adminmenu'] = "admin/menu.php";
 
 // Install Script

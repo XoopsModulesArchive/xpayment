@@ -25,6 +25,7 @@
 	function xpayment_getFilterElement($filter, $field, $sort='created', $fct = 'invoice') {
 		$components = xpayment_getFilterURLComponents($filter, $field, $sort);
 		include_once('xpayment.objects.php');
+        $ele = '';
 		switch ($field) {
 		    case 'mode':
 				$ele = new XoopsFormSelectInvoiceMode('', 'filter_'.$field.'', $components['value'], 1, false, true);
@@ -87,6 +88,8 @@
 		$parts = explode('|', $filter);
 		$ret = array();
 		$value = '';
+        $ele_value = '';
+        $operator = '';
     	foreach($parts as $part) {
     		$var = explode(',', $part);
     		if (count($var)>1) {

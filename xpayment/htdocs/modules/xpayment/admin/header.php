@@ -77,7 +77,7 @@
 
 	xoops_load('pagenav');	
 	xoops_load('xoopsmailer');
-	
+	/*
 	IF (!@ include_once XOOPS_ROOT_PATH."/Frameworks/art/functions.admin.php"):    
 	function loadModuleAdminMenu($currentoption, $breadcrumb = "")
 	{
@@ -98,9 +98,9 @@
 		#buttonbar li { display:inline; margin:0; padding:0; }
 		#buttonbar a { float:left; background:url("'.$image_link.'/left_both.gif") no-repeat left top; margin:0; padding:0 0 0 9px; border-bottom:1px solid #000; text-decoration:none; }
 		#buttonbar a span { float:left; display:block; background:url("'.$image_link.'/right_both.gif") no-repeat right top; padding:5px 15px 4px 6px; font-weight:bold; color:#765; }
-		/* Commented Backslash Hack hides rule from IE5-Mac \*/
+//		 Commented Backslash Hack hides rule from IE5-Mac \
 		#buttonbar a span {float:none;}
-		/* End IE5-Mac hack */
+//		 End IE5-Mac hack
 		#buttonbar a:hover span { color:#333; }
 		#buttonbar .current a { background-position:0 -150px; border-width:0; }
 		#buttonbar .current a span { background-position:100% -150px; padding-bottom:5px; color:#333; }
@@ -136,5 +136,4 @@
 	}
 		
 	ENDIF;
-
-?>
+*/
