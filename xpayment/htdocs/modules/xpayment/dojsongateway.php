@@ -36,7 +36,7 @@ include('../../mainfile.php');
 $GLOBALS['xoopsLogger']->activated = false;
 
 xoops_load('XoopsUserUtility');
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 foreach($_GET as $id => $val)
 	${$id} = $val;
